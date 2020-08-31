@@ -10,7 +10,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'server',
+  target: 'static',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -51,7 +51,7 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/vuetify',
+    ['@nuxtjs/vuetify', { treeShake: true }],
   ],
   /*
    ** Nuxt.js modules

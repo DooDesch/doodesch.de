@@ -8,9 +8,9 @@
 
     v-footer(v-if="about" :absolute='!fixed' app)
       span © {{ new Date().getFullYear() }}
-    v-btn(v-if="about" x-large icon elevation='4' to='/')#back.mt-6 
+    v-btn(v-if="about" x-large icon elevation='4' to='/')#back.mt-6
       v-icon mdi-chevron-up
-    v-btn(v-else x-large icon elevation='4' to='about')#next.mb-6 
+    v-btn(v-else x-large icon elevation='4' to='about')#next.mb-6
       v-icon mdi-chevron-down
 </template>
 
@@ -19,12 +19,30 @@ export default {
   data() {
     return {
       fixed: true,
+      changing: false,
     }
   },
   computed: {
     about() {
       if (this.$route.name === 'about') return true
       return false
+    },
+  },
+  beforeMount() {
+    window.addEventListener('wheel', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('wheel', this.handleScroll)
+  },
+  methods: {
+    handleScroll(event) {
+      event.preventDefault()
+
+      if (event.deltaY > 0 && !this.changing) {
+        this.changing = true
+        console.log(event.deltaY)
+      }
+      // Your scroll handling here
     },
   },
 }

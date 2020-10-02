@@ -36,8 +36,6 @@ export default {
   },
   methods: {
     async handleScroll(event) {
-      event.preventDefault()
-
       if (!this.changing) {
         this.changing = true
 

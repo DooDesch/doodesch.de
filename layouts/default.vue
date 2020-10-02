@@ -7,7 +7,7 @@
         nuxt.
 
     v-footer(v-if="about" :absolute='!fixed' app)
-      span © {{ new Date().getFullYear() }}
+      span © {{ new Date().getFullYear() }} - DooDesch.de
     v-btn(v-if="about" x-large icon elevation='4' to='/')#back.mt-6
       v-icon mdi-chevron-up
     v-btn(v-else x-large icon elevation='4' to='about')#next.mb-6

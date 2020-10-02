@@ -35,12 +35,21 @@ export default {
     window.removeEventListener('wheel', this.handleScroll)
   },
   methods: {
-    handleScroll(event) {
+    async handleScroll(event) {
       event.preventDefault()
 
-      if (event.deltaY > 0 && !this.changing) {
+      if (!this.changing) {
         this.changing = true
-        console.log(event.deltaY)
+
+        if (event.deltaY > 0) {
+          await this.$router.push({ path: '/about' })
+        } else {
+          await this.$router.push({ path: '/' })
+        }
+
+        setTimeout(() => {
+          this.changing = false
+        }, 500)
       }
       // Your scroll handling here
     },

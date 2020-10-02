@@ -23,7 +23,7 @@
                   Programmierer & Gamer
               v-col.px-0
                 v-row(align='center' justify='center').ma-0.fill-height.
-                  PHP / JS / LUA / PYTHON
+                  JS / PHP / LUA / PYTHON
               v-col.px-0
                 v-row(align='center' justify='center').ma-0.fill-height.
                   Köln

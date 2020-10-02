@@ -31,9 +31,6 @@
 
 <script>
 export default {
-  mounted() {
-    console.log(this.$device.isMobile)
-  },
   transition(to, from) {
     if (to.name === 'about') {
       return 'scroll-y-reverse-transition'

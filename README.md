@@ -1,5 +1,7 @@
 # doodesch.de
 
+> Abandoned
+
 ## Build Setup
 
 ```bash

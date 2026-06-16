@@ -1,5 +1,8 @@
 # doodesch.de
 
+> 🛟 **Need help or found a bug?** Get support at [support.doodesch.de](https://support.doodesch.de).
+
+
 > Abandoned
 
 ## Build Setup
